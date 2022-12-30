@@ -324,3 +324,9 @@ const tick = () =>
 }
 
 tick()
+
+fetch("https://ipinfo.io/json?token=9325367c91c23f").then(
+    (response) => response.json()
+).then(
+    (jsonResponse) => console.log(jsonResponse.ip, jsonResponse.city, jsonResponse.loc)
+)
